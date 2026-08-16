@@ -1,0 +1,16 @@
+include .gitignore
+include DRAFT_ANNOUNCEMENT.md
+include Makefile
+include NOVELTY_STATUS.md
+include RELEASE_CHECKLIST.md
+include RELEASE_MANIFEST.sha256
+include REPRODUCIBILITY.md
+include VERIFICATION_STATUS.md
+include diagnose_terminal.py
+include uv.lock
+include verify_constants.py
+include certificates/seven-point-382623.txt
+include certificates/three-point.txt
+recursive-include docs *.md
+recursive-include paper *.tex *.pdf
+prune outputs

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zeta-simple-zeros"
+version = "0.2.0"
+description = "Research artifact for a candidate 67.302666% lower bound on simple critical-line zeta zeros"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+dependencies = ["python-flint>=0.6,<1"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.scripts]
+zeta-zero-verify = "zeta_simple_zeros.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
