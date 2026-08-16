@@ -42,7 +42,7 @@ of the full generated Lean build.
   certificate report, paper source/PDF, and verification-status snapshot.
 - [x] Build the source distribution and wheel without packaging warnings, then
   extract the source distribution and verify every release-manifest entry.
-- [ ] Finish all 5,793 scaled Code-10 modules, validate the lane, transfer, and
+- [x] Finish all 5,793 scaled Code-10 modules, validate the lane, transfer, and
   cross-host artifact attestations, and preserve those attestations in the
   release snapshot.
 

@@ -1,0 +1,25 @@
+{
+  "artifact_count": 28965,
+  "final_source_validation_sha256": "5e0be5e5e6daea7dcd6b73c6a6ca810a8b515b62843eaf78c95c7383c3cfebda",
+  "finalizer_sha256": "020e9077804d8da35c25196613c6d0fec9e9aacdbbc71ce7f334d863d86a3e3e",
+  "finished_utc": "2026-08-16T18:34:33Z",
+  "format": "q2-scaled-code10-transfer-attestation-v1",
+  "gap_compiled_artifacts_sha256": "709004264fab5cade402dce3ae0ac1571e055f7191f77685ddf293a94ba794f6",
+  "gap_kernel_compile_range": [
+    4500,
+    4506
+  ],
+  "gap_logs_sha256": "9f1c712ac1fefe72948358cbb5140f97152b75526f7bf35796e5f46f75ac5bd1",
+  "high_attestation_sha256": "2260fecc058e235543789ec5c2bedd50db714d1171a11755d57429259c5ba2cc",
+  "kernel_status": "mac-catalog-green-linux-clean-rehash-pending",
+  "local_artifacts_sha256": "c625a43b0851e9f3c12ffc9352b4afdbef1b9245a7abea21070db434e7fd9304",
+  "low_attestation_sha256": "14dbf1ea754ce8bcefa8f11b1a84d8db215588ddeda18f4815c26a8f039f5489",
+  "metadata_sha256": "3ed968652b472fbc3ddc65dc36b21d5b2a3844122b1b819eaf2cad0f030dbe2b",
+  "olean_count": 5793,
+  "preflight_sha256": "c6150fcc55ad22ba164d0d81794c50422eed80ace048528003b57a2b2ec9646d",
+  "remote_artifacts_sha256": "1c10916e6b7ed04148d51547aa363aaff5790569b44d81a72b8f8438db6166e9",
+  "remote_host": "dev",
+  "remote_project": "/home/uwe/dev/zeta-research-2026-08-11/lean-work/certificate",
+  "source_validation_sha256": "5e0be5e5e6daea7dcd6b73c6a6ca810a8b515b62843eaf78c95c7383c3cfebda",
+  "status": "pass"
+}

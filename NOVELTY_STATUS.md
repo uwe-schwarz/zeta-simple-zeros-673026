@@ -24,6 +24,10 @@ in the three independently packaged comparison artifacts listed above.
 The number above is **not** the largest public claim in the same broad
 research-draft category. Examples visible at the snapshot date include:
 
+- [`yuhangshi888/zeta-simple-zeros-673316977`](https://github.com/yuhangshi888/zeta-simple-zeros-673316977/tree/2d2258115570e712695786647e881410400f71df),
+  whose repository states $67.3316977142\%$ and reports a Lean-checked local
+  two-certificate deduction while explicitly importing upstream interval
+  certificates;
 - [`sxuff/zeta-positioned-pressure`](https://github.com/sxuff/zeta-positioned-pressure),
   whose repository description states $67.3205978423\%$;
 - [`AMTOPA/zeta-exact-pressure-673262`](https://github.com/AMTOPA/zeta-exact-pressure-673262),

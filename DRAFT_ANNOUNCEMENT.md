@@ -50,11 +50,13 @@ The repository separates four kinds of evidence:
 4. the subset of the Lean production graph that has actually completed kernel
    checking.
 
-The full Code-9 catalog is complete and Code-10 is being allowed to finish.
-The complete Code-2 catalog and final dependency-closed public theorem build
-are intentionally deferred unless there is external interest in funding or
-running that final verification stage. Nothing in the release should be read
-as claiming those deferred gates have passed.
+The full bounded-subcell adaptive tangent and mean-value interval catalogs are
+complete, including preserved Code-10 lane, transfer, canonical gap-replay,
+and cross-host artifact attestations. The complete tangent-and-convexity
+catalog and final dependency-closed public theorem build are intentionally
+deferred unless there is external interest in funding or running that final
+verification stage. Nothing in the release should be read as claiming those
+deferred gates have passed.
 
 The stability refinement, seven-point kernel use, aggregation, and pinching
 arguments derive from Ainta's pinned public verifier and draft. Anthropic's

@@ -75,7 +75,7 @@ $$
 | Finite inequality | Reproducible Arb certificate at the exact rational target |
 | Lean certificate semantics | Kernel-built generic MVT, segment, replay, and scaled-checker layers |
 | Code-9 terminal catalog | Complete dependency-ordered kernel build; terminal attestation preserved in [`evidence/lean`](evidence/lean/README.md) |
-| Code-10 terminal catalog | Production kernel build in progress |
+| Code-10 terminal catalog | Complete 5,793-module production build; lane, transfer, canonical gap replay, and cross-host content attestations preserved in [`evidence/lean`](evidence/lean/README.md) |
 | Code-2 terminal catalog | Representative production modules kernel-built; full catalog deliberately deferred |
 | Final public Lean theorem | Source-complete candidate, but its dependency-closed production replay is not complete |
 

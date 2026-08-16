@@ -15,7 +15,7 @@ must not be used as evidence for a stronger column.
 | Exact spectral conversion and $m=279$ optimum | Exact rational and directed-Arb audit | Included constant verifier separates the complete finite scan and checks the exact tail checkpoints | Formalized, including the displayed decimal comparison | Candidate evidence complete |
 | MVT cells, segment forest, transformed topology | Exhaustive independent source/replay audits | Deterministic generators and pinned manifests | Generic layers and production MVT data are kernel-built | Complete for the generated layers |
 | Partitioned Code-9 catalog | Exact tree/box/path/source audit | 1,773 terminal providers, 6,350 dependency targets | Full catalog build passed | Complete |
-| Scaled Code-10 catalog | Exact 289,646-terminal source audit | 5,793 generated modules | One lane complete; remaining lane is running | In progress |
+| Scaled Code-10 catalog | Exact 289,646-terminal source audit | 5,793 generated modules and 28,965 cross-host-hashed artifacts | Full catalog build, seven-module canonical gap replay, transfer, and macOS/Linux artifact digest passed | Complete |
 | Scaled Code-2 catalog | Exact 198,935-terminal source audit and direct semantic bridge audit | 3,979 generated modules | 22 production modules and representative bridge modules passed | Full catalog deferred |
 | Final finite theorem `q2_finite_certificate_mvt` | Full source graph and fail-closed plan audited | 8,379-target final plan frozen | Dependency-closed final build not run | Pending |
 | Final zeta-zero asymptotic theorem | Analytic bridge and exact theorem statements audited | Not applicable | Final fresh integration and axiom audit not run | Pending |
@@ -51,7 +51,7 @@ mathematical claims.
 
 ## Gates required for a full formal-verification claim
 
-1. Finish and attest all 5,793 scaled Code-10 catalog modules.
+1. [Complete] Finish and attest all 5,793 scaled Code-10 catalog modules.
 2. Finish and attest all 3,979 scaled Code-2 catalog modules.
 3. Build all 8,379 targets in the frozen final dependency plan.
 4. Rehash-build the public finite theorem from the exact source closure.
