@@ -16,7 +16,7 @@ The new finite input is an exact Arb-certified inequality
 980,069 nodes. The verifier, certificate, proof draft, exact constant
 arithmetic, and an explicit verification-status matrix are available here:
 
-`REPOSITORY_URL`
+`https://github.com/uwe-schwarz/zeta-simple-zeros-673026`
 
 Important boundary: substantial Lean components are kernel-checked, but the
 dependency-closed production replay is not complete. This is a research draft
