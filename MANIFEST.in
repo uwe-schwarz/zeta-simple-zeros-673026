@@ -12,5 +12,6 @@ include verify_constants.py
 include certificates/seven-point-382623.txt
 include certificates/three-point.txt
 recursive-include docs *.md
+recursive-include evidence *.md *.json
 recursive-include paper *.tex *.pdf
 prune outputs

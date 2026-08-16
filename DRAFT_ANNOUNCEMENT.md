@@ -5,9 +5,9 @@ repository URL, and release-day novelty check are complete.
 
 ## Short post
 
-We have prepared an AI-assisted, unreviewed derivative artifact that strengthens
-the finite certificate in Ainta's Montgomery--Taylor refinement for zeros that
-are both simple and on the critical line:
+This repository contains an AI-assisted, unreviewed derivative artifact that
+strengthens the finite certificate in Ainta's Montgomery--Taylor refinement
+for zeros that are both simple and on the critical line:
 
 `liminf N_0^s(T,2T) / N(T,2T) >= 0.6730266625438475`.
 

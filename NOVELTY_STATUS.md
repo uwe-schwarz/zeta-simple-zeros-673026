@@ -13,10 +13,11 @@ correctness, peer review, or independent acceptance.
 | [Anthropic, *More Than Two Thirds of the Zeros...*](https://www.anthropic.com/research/riemann-zeta) | $0.672500703679\ldots$ | Published company research paper and Lean artifact; analytic foundation used here |
 | [Ainta, `zeta-simple-zeros`](https://github.com/ainta/zeta-simple-zeros/tree/040c5e899e658aed7b56a2a87f501798fe10761d) | $0.673008527927\ldots$ | AI-assisted, unreviewed research draft; source of the verifier lineage |
 | [Learademacher, `ai-refines-ai-zeta-bound`](https://github.com/learademacher/ai-refines-ai-zeta-bound) | $0.673021361950\ldots$ | Clean-room research draft and reproduction point |
+| [`hrx114514x/riemann-simple-zero-certificate`](https://github.com/hrx114514x/riemann-simple-zero-certificate) | $0.673025456226\ldots$ | Independently packaged same-lineage Arb certificate published on 2026-08-16; no end-to-end Lean proof claimed |
 | This artifact | $0.6730266625438475$ | Reproducible q2 Arb certificate; incomplete full Lean production replay |
 
-Thus this artifact improves the exact number in the direct Ainta and
-Learademacher lineage.
+Thus this artifact improves the exact numbers in the direct Ainta lineage and
+in the three independently packaged comparison artifacts listed above.
 
 ## Higher public research-draft claims already exist
 

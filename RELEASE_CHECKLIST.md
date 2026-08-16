@@ -31,12 +31,13 @@ of the full generated Lean build.
   certificate report, paper source/PDF, and verification-status snapshot.
 - [x] Build the source distribution and wheel without packaging warnings, then
   extract the source distribution and verify every release-manifest entry.
+- [ ] Finish all 5,793 scaled Code-10 modules, validate the lane, transfer, and
+  cross-host artifact attestations, and preserve those attestations in the
+  release snapshot.
 
 ## Optional evidence before release
 
-- [ ] Let the scaled Code-10 production catalog finish and include its exact
-  attestation.
-- [ ] Include the already completed partitioned Code-9 attestation.
+- [x] Include the already completed partitioned Code-9 terminal attestation.
 - [ ] Include representative scaled Code-2 kernel logs without implying that
   all 3,979 modules were built.
 

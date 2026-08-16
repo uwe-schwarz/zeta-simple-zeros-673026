@@ -11,7 +11,8 @@ certificate-consumer effort.
 
 **[Paper source](paper/riemann.tex)** · [Proof outline](docs/proof.md) ·
 [Verifier](docs/verifier.md) · [Verification status](VERIFICATION_STATUS.md) ·
-[Novelty status](NOVELTY_STATUS.md) · [Fresh replay](REPRODUCIBILITY.md)
+[Novelty status](NOVELTY_STATUS.md) · [Fresh replay](REPRODUCIBILITY.md) ·
+[Lean build evidence](evidence/lean/README.md)
 
 Let $N(T,2T)$ count nontrivial zeros with multiplicity and let
 $N_0^s(T,2T)$ count zeros that are simultaneously simple and on the critical
@@ -67,7 +68,7 @@ $$
 | Stability and spectral conversion | Mathematical proof plus Lean formalization of the analytic assembly |
 | Finite inequality | Reproducible Arb certificate at the exact rational target |
 | Lean certificate semantics | Kernel-built generic MVT, segment, replay, and scaled-checker layers |
-| Code-9 terminal catalog | Complete dependency-ordered kernel build |
+| Code-9 terminal catalog | Complete dependency-ordered kernel build; terminal attestation preserved in [`evidence/lean`](evidence/lean/README.md) |
 | Code-10 terminal catalog | Production kernel build in progress |
 | Code-2 terminal catalog | Representative production modules kernel-built; full catalog deliberately deferred |
 | Final public Lean theorem | Source-complete candidate, but its dependency-closed production replay is not complete |
