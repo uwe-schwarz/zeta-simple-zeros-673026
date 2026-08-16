@@ -39,6 +39,14 @@ These entries are cited as public claims, not endorsed as correct. Their
 proofs, trust boundaries, and review status are not interchangeable with this
 artifact's evidence.
 
+For the pinned `yuhangshi888` revision above, this snapshot independently
+reran `verify_release.py`, the pinned `lake build`, and `lake env lean
+Audit.lean`.  The release and local Lean layer passed, and the printed theorem
+dependencies were only `propext`, `Classical.choice`, and `Quot.sound`.  This
+does **not** replay or independently certify its two imported upstream
+interval certificates, which remain the material trust boundary for that
+larger number.
+
 ## Honest novelty claim
 
 The release should not advertise a numerical record. Its defensible novelty
