@@ -121,6 +121,15 @@ It is also not the largest numerical value among current public research-draft
 claims; the intended contribution is the exact certificate and formalization
 path. See [`NOVELTY_STATUS.md`](NOVELTY_STATUS.md).
 
+## Expert review
+
+Mathematical and reproducibility review is welcome.  Please use the
+[verification-report issue form](https://github.com/uwe-schwarz/zeta-simple-zeros-673026/issues/new?template=verification-report.yml)
+and include the exact theorem, file, command, or certificate location being
+checked.  Reports that distinguish a mathematical objection from a tooling or
+reproduction failure are especially useful.  The repository does not treat an
+unreviewed numerical comparison as validation.
+
 ## Provenance
 
 The stability refinement, seven-point kernel use, block aggregation, shifted

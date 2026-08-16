@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Verification status and trust boundary
+    url: https://github.com/uwe-schwarz/zeta-simple-zeros-673026/blob/main/VERIFICATION_STATUS.md
+    about: Read the exact completed and deferred verification gates before reporting a result.

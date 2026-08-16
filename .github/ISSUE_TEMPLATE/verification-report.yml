@@ -1,0 +1,57 @@
+name: Verification or mathematical review report
+description: Report a reproduced result, mathematical objection, or verification failure.
+title: "[Review]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reviewing this unreviewed research artifact. Please identify the exact claim or command and separate mathematical concerns from tooling failures where possible.
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Review scope
+      options:
+        - Mathematical argument or theorem statement
+        - Finite interval certificate
+        - Lean source or kernel evidence
+        - Reproducibility or packaging
+        - Novelty, attribution, or prior work
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Exact location
+      description: Name the theorem, file and line, command, certificate entry, or commit reviewed.
+      placeholder: "paper/riemann.tex, theorem or equation; commit; command..."
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: State what passed, failed, or appears mathematically incorrect.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and reproduction
+      description: Include exact commands, output, derivation, counterexample, or links to primary sources.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: For computational reports, include OS, architecture, Python or Lean version, and relevant dependency versions.
+    validations:
+      required: false
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Trust-boundary acknowledgement
+      options:
+        - label: I checked VERIFICATION_STATUS.md and understand that the dependency-closed final Lean theorem is not claimed complete.
+          required: true
