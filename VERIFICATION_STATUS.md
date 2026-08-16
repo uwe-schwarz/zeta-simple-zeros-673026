@@ -20,6 +20,15 @@ must not be used as evidence for a stronger column.
 | Final finite theorem `q2_finite_certificate_mvt` | Full source graph and fail-closed plan audited | 8,379-target final plan frozen | Dependency-closed final build not run | Pending |
 | Final zeta-zero asymptotic theorem | Analytic bridge and exact theorem statements audited | Not applicable | Final fresh integration and axiom audit not run | Pending |
 
+The internal catalog labels used by the build scripts mean:
+
+- **Code-9:** bounded-subcell adaptive tangent terminals;
+- **Code-10:** mean-value interval terminals;
+- **Code-2:** tangent-and-convexity terminals.
+
+These labels describe certificate-consumer implementation paths, not separate
+mathematical claims.
+
 ## What may be claimed now
 
 - The project has a reproducible interval certificate for the exact finite
@@ -57,6 +66,8 @@ must not be used as evidence for a stronger column.
 
 The standalone verifier trusts Python, IEEE-754 binary64 behavior,
 `python-flint`, FLINT/Arb, the operating system, the hardware, and the
-committed verifier source. The incomplete full Lean replay is designed to
+committed verifier source. The release replay used Python 3.11.15 and
+`python-flint` 0.9.0 on macOS 26.6.1 arm64; the exact file set is pinned by
+`RELEASE_MANIFEST.sha256`. The incomplete full Lean replay is designed to
 replace most of this certificate-consumption boundary, but it must not be
 treated as complete until every gate above has passed.

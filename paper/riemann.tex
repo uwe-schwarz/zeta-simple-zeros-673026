@@ -29,15 +29,23 @@
 
 \maketitle
 
+\begin{center}
+\small
+AI-assisted derivative research artifact. Curated and released by Uwe Schwarz.
+Mathematical provenance and contribution boundaries are stated in the
+Reproducibility section.
+\end{center}
+
 \begin{abstract}
 Let $N(T,2T)$ count the zeros of the Riemann zeta function with ordinates in
 $(T,2T]$, with multiplicity, and let $N_0^s(T,2T)$ count the simple zeros on
 the critical line in that interval.  This derivative artifact updates the
-finite certificate in Ainta's AI-assisted draft~\cite{Ainta26}.  Keeping that
-draft's stability, overlap-kernel, block-aggregation, and pinching arguments,
-which refine the rank--trace argument of Claude~\cite{Claude26}, and adding an
-exact finite-dimensional spectral envelope plus a rigorously reproduced
-stronger interval certificate gives
+finite certificate in Ainta's AI-assisted draft~\cite{Ainta26}.  It retains
+Ainta's stability refinement, seven-point use of the Montgomery--Taylor
+overlap kernel inherited from Claude's analysis, block aggregation, shifted
+pinching, and verifier lineage~\cite{Claude26}.  We add an exact
+finite-dimensional spectral envelope and a stronger rational interval
+certificate, obtaining the candidate unconditional bound
 \[
  \liminf_{T\to\infty}\frac{N_0^s(T,2T)}{N(T,2T)}
  \ge 0.6730266625438475496579\ldots .
@@ -47,9 +55,10 @@ target $382623/10^8$.  Its standalone Arb replay is complete.  A substantial
 Lean formalization has been kernel-checked, but the dependency-closed build of
 all generated terminal catalogs and the final public theorem is not complete;
 this paper is therefore released as an AI-assisted, unreviewed research draft,
-not as a completed formal-verification claim.
+not as a completed formal-verification claim or a numerical-record claim.
 \end{abstract}
 
+\clearpage
 \section{Statement and setup}
 
 We use the notation and normalisations of~\cite[\S\S2,4,7.1]{Claude26}.  Put
@@ -121,6 +130,11 @@ One has
  =0.6730266625438475496579\ldots .
 \]
 \end{theorem}
+
+Theorem~\ref{thm:main} uses Proposition~\ref{prop:F6} as an external
+computer-assisted input.  That proposition is supported here by the
+standalone Arb certificate described in Section~4.  The partial Lean consumer
+does not yet provide a dependency-closed proof of the theorem.
 
 \clearpage
 \section{A stability refinement of the rank--trace inequality}
@@ -443,12 +457,38 @@ Let $B$ be a block of $279$ consecutive retained simple zeros, and write
 $G_B$ for its Gram matrix.  If its span term already exceeds $A$, the
 following estimate is immediate because $C\le A$.  Otherwise the span is
 bounded, so Lemma~\ref{lem:kernel-limit} applies uniformly to every pair.
-The diagonal entries are $1+o(1)$; normalizing the diagonal produces a
-correlation matrix that differs from $G_B$ by $o(1)$ in Frobenius norm.
-Since $m$ is fixed and $\Psi$ is globally $2$-Lipschitz, this changes both
-the defect and the off-diagonal energy by $o(1)$.  Lemma~\ref{lem:block-energy},
-Lemma~\ref{lem:spectral-envelope}, and \eqref{eq:span-tradeoff} therefore give
-uniformly in $B$
+The diagonal entries are $1+o(1)$ uniformly.  To make the normalization
+explicit, put
+\[
+ \delta_T:=\max_i |(G_B)_{ii}-1|=o(1),\qquad
+ D_B:=\operatorname{diag}((G_B)_{ii}^{-1/2}),\qquad
+ R_B:=D_BG_BD_B.
+\]
+The matrix $R_B$ is a correlation matrix.  Since $m$ is fixed and the Gram
+entries satisfy $|(G_B)_{ij}|\le
+\sqrt{(G_B)_{ii}(G_B)_{jj}}$, one has $\|G_B\|_{\F}=O_m(1)$ and
+\[
+ \|R_B-G_B\|_{\F}
+ \le \|D_B-I\|_{\mathrm{op}}\|G_B\|_{\F}\|D_B\|_{\mathrm{op}}
+    +\|G_B\|_{\F}\|D_B-I\|_{\mathrm{op}}
+ =O_m(\delta_T)=o(1).
+\]
+The Hoffman--Wielandt inequality and the global $2$-Lipschitz property of
+$\Psi$ now give
+\[
+ |\cD(R_B)-\cD(G_B)|
+ \le 2\sqrt m\,\|R_B-G_B\|_{\F}=o(1),
+\]
+while
+\[
+ \left|\sum_{i\ne j}|(R_B)_{ij}|^2
+       -\sum_{i\ne j}|(G_B)_{ij}|^2\right|
+ \le (\|R_B\|_{\F}+\|G_B\|_{\F})\|R_B-G_B\|_{\F}=o(1).
+\]
+Thus the normalization changes the defect and off-diagonal energy by $o(1)$.
+It follows from Lemmas~\ref{lem:block-energy} and
+\ref{lem:spectral-envelope}, together with \eqref{eq:span-tradeoff}, that
+uniformly in $B$,
 \begin{equation}\label{eq:279block}
  \cD(G_B)+\frac1{500}\operatorname{span}(B)
  \ge C-o(1).
@@ -523,8 +563,9 @@ Divide by $N(T,2T)$ and let $T\to\infty$ to obtain
 \]
 Clearing rational factors gives the exact expression stated in
 Theorem~\ref{thm:main}.  Directed $256$-bit Arb arithmetic separates this
-value between decimals ending in $\ldots0978$ and $\ldots0979$.  An exact
-scan through $7\le m\le1000$ gives a unique maximum at $m=279$, with
+value between decimals ending in $\ldots0978$ and $\ldots0979$.  A directed
+interval-certified scan through $7\le m\le1000$ gives a unique maximum at
+$m=279$, with
 $m=278$ second.  For completeness, the infinite tail is controlled as
 follows.  Put $q=382623/10^8$ and, for real $x\ge1000$, set
 \[
@@ -566,22 +607,34 @@ and certificate.  The verifier reconstructs every transcendental interval
 enclosure from the stated formulas; a successful replay reports the exact
 target $382623/100000000$ and \texttt{verified=true}.
 
+The release snapshot uses macOS 26.6.1 on arm64, Python 3.11.15, and
+\texttt{python-flint} 0.9.0, which is the Python binding used to generate the
+Arb enclosures.  The complete release file identity is recorded in
+\texttt{RELEASE\_MANIFEST.sha256}; the fresh command and output are recorded
+in \texttt{REPRODUCIBILITY.md}.
+
 The artifact also contains source and partially completed kernel evidence for
-a Lean certificate consumer.  At the snapshot date, the generic MVT,
-segment, replay, and scaled-checker semantics and the complete code-9 catalog
-have been kernel-built; the code-10 production catalog is in progress, and
-the full code-2 catalog and final dependency-closed public build are deferred.
+a Lean certificate consumer.  At the snapshot date, the generic
+mean-value-theorem, segment, replay, and scaled-checker semantics and the
+complete bounded-subcell adaptive tangent catalog have been kernel-built.
+The mean-value interval terminal catalog is in progress; the full
+tangent-and-convexity terminal catalog and final dependency-closed public
+build are deferred.
 Accordingly, this draft does not claim a completed transitive Lean
 verification.  The machine-readable status matrix and the final gates are
 recorded in \texttt{VERIFICATION\_STATUS.md}.
 
 This work is AI-assisted and unreviewed.  It is a derivative of the earlier
-public draft~\cite{Ainta26}; the stability, overlap-kernel, block-aggregation,
-and shifted-pinching arguments originate there.  The new contribution in this
-revision is the exact finite-dimensional spectral envelope, the stronger exact
-finite certificate and its reproducibility package, and the partially
-completed Lean certificate-consumer effort.  The clean-room
-reproduction~\cite{Learademacher26} provides a separate comparison point.
+public draft~\cite{Ainta26}; its stability refinement, seven-point use of the
+Montgomery--Taylor overlap kernel, block aggregation, shifted pinching, and
+verifier lineage are retained here.  The analytic foundation and limiting
+overlap kernel come from Claude's paper and Lean artifact
+\cite{Claude26,AnthropicLean26}.  The new contribution in this revision is the
+exact finite-dimensional spectral envelope, the stronger exact finite
+certificate and its reproducibility package, and the partially completed Lean
+certificate-consumer effort.  The clean-room
+reproduction~\cite{Learademacher26} is an independent comparison only; no
+proof text or implementation is imported from it.
 The numerical statement should be described as a candidate improvement within
 this certificate lineage, not as an established record, until independent
 review has taken place.
@@ -597,20 +650,33 @@ preprint, August 10, 2026,
 \href{https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf}
 {available online}.
 
+\bibitem{AnthropicLean26}
+Anthropic,
+\emph{Lean artifact for More than two thirds of the zeros of the Riemann zeta
+function lie on the critical line}, version 1.0, commit
+\texttt{3635e748\allowbreak26a4c1fc\allowbreak ece7d1cd\allowbreak2b6fa75e\allowbreak43a00510},
+August 10, 2026,
+\href{https://github.com/anthropics/zeta-23-lean/tree/3635e74826a4c1fcece7d1cd2b6fa75e43a00510}
+{GitHub repository}.
+
 \bibitem{Ainta26}
 Ainta,
 \emph{More than $67.30085\%$ of the zeros of the Riemann zeta function are
 simple and lie on the critical line},
-AI-assisted research draft and verifier artifact, August 2026,
-\href{https://github.com/ainta/zeta-simple-zeros}
-{GitHub repository}.
+AI-assisted research draft and verifier artifact, commit
+\texttt{040c5e89\allowbreak9e658aed\allowbreak7b56a2a8\allowbreak7f501798\allowbreak fe10761d},
+August 11, 2026,
+\href{https://github.com/ainta/zeta-simple-zeros/tree/040c5e899e658aed7b56a2a87f501798fe10761d}
+{GitHub repository at the cited revision}.
 
 \bibitem{Learademacher26}
 L.~Rademacher,
 \emph{AI refines an AI-derived zeta bound},
-clean-room research draft and reproduction artifact, August 2026,
-\href{https://github.com/learademacher/ai-refines-ai-zeta-bound}
-{GitHub repository}.
+clean-room research draft and reproduction artifact, commit
+\texttt{bd4a7d36\allowbreak988b2322\allowbreak00345278\allowbreak81f4457f\allowbreak2f689e86},
+August 11, 2026,
+\href{https://github.com/learademacher/ai-refines-ai-zeta-bound/tree/bd4a7d36988b23220034527881f4457f2f689e86}
+{GitHub repository at the cited revision}.
 
 \bibitem{Johansson17}
 F.~Johansson,

@@ -1,13 +1,19 @@
 # A candidate 67.302666% lower bound for simple critical-line zeros of the Riemann zeta function
 
 This derivative research draft updates the finite certificate in Ainta's
-AI-assisted [`zeta-simple-zeros`](https://github.com/ainta/zeta-simple-zeros)
-draft. It preserves that draft's stability refinement, overlap kernel, block
-aggregation, and shifted pinching, which extend Anthropic's paper
-[*More Than Two Thirds of the Zeros of the Riemann Zeta Function Lie on the Critical Line*](https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf),
-and adds an exact finite-dimensional spectral conversion, a stronger
+AI-assisted [`zeta-simple-zeros`](https://github.com/ainta/zeta-simple-zeros/tree/040c5e899e658aed7b56a2a87f501798fe10761d)
+draft. It retains Ainta's stability refinement, seven-point use of the
+Montgomery--Taylor overlap kernel, block aggregation, shifted pinching, and
+verifier lineage. The analytic foundation and limiting kernel come from
+Anthropic's paper
+[*More Than Two Thirds of the Zeros of the Riemann Zeta Function Lie on the Critical Line*](https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf).
+This project adds an exact finite-dimensional spectral conversion, a stronger
 reproducible interval certificate, and a substantial Lean
 certificate-consumer effort.
+
+> AI-assisted derivative research artifact. Curated and released by Uwe
+> Schwarz. Mathematical provenance and contribution boundaries are documented
+> below; this stewardship note is not a claim of sole mathematical authorship.
 
 **[Paper source](paper/riemann.tex)** · [Proof outline](docs/proof.md) ·
 [Verifier](docs/verifier.md) · [Verification status](VERIFICATION_STATUS.md) ·
@@ -73,8 +79,10 @@ $$
 | Code-2 terminal catalog | Representative production modules kernel-built; full catalog deliberately deferred |
 | Final public Lean theorem | Source-complete candidate, but its dependency-closed production replay is not complete |
 
-The last row is important: this draft does **not** currently claim a fully
-dependency-closed Lean verification of the new bound. See
+The theorem stated in the paper relies on the standalone Arb certificate for
+the finite inequality. The last row is important: this draft does **not**
+currently claim a fully dependency-closed Lean verification of the new bound.
+See
 [`VERIFICATION_STATUS.md`](VERIFICATION_STATUS.md) for the precise boundary.
 
 ## Reproduce the interval certificate
@@ -115,13 +123,22 @@ path. See [`NOVELTY_STATUS.md`](NOVELTY_STATUS.md).
 
 ## Provenance
 
-The stability argument and original verifier derive from
-[`ainta/zeta-simple-zeros`](https://github.com/ainta/zeta-simple-zeros), which
-is distributed under the MIT license. The clean-room reproduction
-[`learademacher/ai-refines-ai-zeta-bound`](https://github.com/learademacher/ai-refines-ai-zeta-bound)
-provides a useful independent comparison point. The analytic foundation is
-Anthropic's paper and its
-[Lean artifact](https://github.com/anthropics/zeta-23-lean).
+The stability refinement, seven-point kernel use, block aggregation, shifted
+pinching, and original verifier lineage derive from
+[`ainta/zeta-simple-zeros` at commit `040c5e899e...`](https://github.com/ainta/zeta-simple-zeros/tree/040c5e899e658aed7b56a2a87f501798fe10761d),
+which is distributed under the MIT license. This citation does not imply
+coauthorship or endorsement by Ainta.
+
+The clean-room reproduction
+[`learademacher/ai-refines-ai-zeta-bound` at commit `bd4a7d3698...`](https://github.com/learademacher/ai-refines-ai-zeta-bound/tree/bd4a7d36988b23220034527881f4457f2f689e86)
+is an independent comparison point; this repository imports no proof text or
+implementation from it. The analytic foundation and limiting
+Montgomery--Taylor overlap kernel come from Anthropic's paper and its
+[`zeta-23-lean` v1.0 artifact at commit `3635e74826...`](https://github.com/anthropics/zeta-23-lean/tree/3635e74826a4c1fcece7d1cd2b6fa75e43a00510).
+
+This project contributes the exact finite-dimensional spectral envelope, the
+stronger rational certificate, the `m=279` optimization, the reproducibility
+package, and the partial Lean certificate consumer.
 
 ## License
 

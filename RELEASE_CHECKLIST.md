@@ -7,8 +7,19 @@ of the full generated Lean build.
 ## Required before the first public release
 
 - [x] Omit an author line rather than assigning human authorship that cannot be
-  substantiated. Preserve explicit provenance for Ainta, Anthropic, the
-  clean-room reproduction, and the AI-assisted revision.
+  substantiated. Include a non-authorial release-stewardship note and preserve
+  explicit provenance for Ainta, Anthropic, the clean-room reproduction, and
+  the AI-assisted revision.
+- [x] Pin exact public revisions for Anthropic's Lean artifact, Ainta's draft,
+  and the clean-room comparison. Preserve Ainta's MIT notice without implying
+  endorsement or coauthorship.
+- [x] Attribute the limiting Montgomery--Taylor overlap kernel to Anthropic's
+  analytic work and Ainta's seven-point exploitation to Ainta.
+- [x] State in the paper that Theorem 1.1 still relies on the external Arb
+  certificate, define the internal Lean catalog labels only in the status
+  document, and include the verifier environment and release-manifest name.
+- [x] Add the explicit diagonal-normalization estimate requested by the final
+  candidate-release referee review.
 - [x] Create the private staging repository
   `uwe-schwarz/zeta-simple-zeros-673026`. Keep it private until the release-day
   novelty review and a separate, explicit decision to publish.
