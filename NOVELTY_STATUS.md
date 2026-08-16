@@ -43,9 +43,14 @@ For the pinned `yuhangshi888` revision above, this snapshot independently
 reran `verify_release.py`, the pinned `lake build`, and `lake env lean
 Audit.lean`.  The release and local Lean layer passed, and the printed theorem
 dependencies were only `propext`, `Classical.choice`, and `Quot.sound`.  This
-does **not** replay or independently certify its two imported upstream
-interval certificates, which remain the material trust boundary for that
-larger number.
+does **not** give a dependency-closed Lean theorem about $N_0^s/N$: its Lean
+endpoint proves the finite supporting-plane and exact-constant deductions
+with the two certificate inequalities and trace-envelope alternative as
+explicit hypotheses.  The paper's zeta theorem additionally imports the
+analytic interface, Gram asymptotic, spectral pinching, certified baseline,
+and two upstream interval certificates.  Those inputs were not independently
+formalized or replayed in that repository and remain the material trust
+boundary for the larger number.
 
 ## Honest novelty claim
 
